@@ -1,0 +1,47 @@
+:root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  --primary-color: #20211C;
+  --secondary-color: #49543B;
+  --tertiary-color: #0E1C36;
+  --contrast: #4A4A48;
+  --light-contrast: #F1F2EB; 
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--light-contrast);
+}
+
+.form {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--contrast);
+}
+
+table {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--contrast);
+  margin: 0px;
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.number-input {
+  width: 4%;
+  text-align: center;
+}
+
+.darkrow {
+  background-color: var(--primary-color);
+}
+
+.lightrow {
+  background-color: var(--secondary-color);
+}
