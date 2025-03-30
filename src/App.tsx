@@ -42,10 +42,19 @@ function App() {
       console.log("fetching route to ", park.parkname);
       const route = await api.get_route(origin, destination);
       console.log("route to park: ", route);
+      if (!route) {
+        continue;
+      }
       setParkRoutes((oldList) => {
         const newList: parkRoute[] = [
           ...oldList,
-          { park: park, route: route ? route.routes[0] : emptyRoute },
+          {
+            park: park,
+            route:
+              route?.routes && route.routes.length > 0
+                ? route.routes[0]
+                : emptyRoute,
+          },
         ];
         return newList;
       });
